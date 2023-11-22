@@ -54,7 +54,7 @@ function setTheme(theme) {
 //     const chartURL = `https://www.geckoterminal.com/kava/pools/${initialToken}?embed=1&info=1&swaps=0`
 //     chartIframe.src = chartURL;
 // }
-//End Dextools Light and Dark Toggle with Page
+//End Chart Light and Dark Toggle with Page
 
 setTheme(currentTheme);
 
@@ -65,6 +65,7 @@ checkbox.addEventListener("change", function () {
 prefersDarkScheme.addEventListener("change", (event) => {
     setTheme(event.matches ? "dark" : "light");
 });
+//End Dark-Light Mode
 
 // Button to toggle the first checkbox
 const toggleButton = document.getElementById("toggleButton");
@@ -179,7 +180,7 @@ window
     .matchMedia("(prefers-reduced-motion: reduce)")
     .addEventListener("change", checkReducedMotion);
 
-// Scroll Effects
+// Animations on Scroll
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         console.log(entry);
@@ -240,7 +241,7 @@ const barNav = document.getElementById("bars");
 
 links.forEach((link) => {
     link.addEventListener("click", function () {
-        hamCheck.checked = false; // Uncheck the checkbox
+        hamCheck.checked = false;
         barNav.classList.remove("fa-xmark");
         barNav.classList.add("fa-bars");
     });
